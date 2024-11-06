@@ -1,5 +1,6 @@
 import pickle
 import pandas as pd
+import sklearn
 
 # User Input
 FAKULTAS = [
@@ -35,5 +36,5 @@ def get_prediction(user_input: dict):
 
     user_input = pd.DataFrame(user_input, index=[0])
     predicted_int = model.predict(user_input)[0]
-    
+
     return MASA_TUNGGU[predicted_int]
